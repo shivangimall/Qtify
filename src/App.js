@@ -26,7 +26,6 @@ function App() {
     <>
    <Navbar/>
    <Hero/>
-   <div className='wrapper'>
    {
     topAlbumsData.map((item)=>{
       return (
@@ -34,7 +33,7 @@ function App() {
       )
     })
    }
-   </div>
+
    </>
   );
 }
