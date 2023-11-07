@@ -30,7 +30,7 @@ function App() {
    {
     topAlbumsData.map((item)=>{
       return (
-      <Card data= {item} type={'album'}/>
+      <Card data= {item} type={'album'} key={item.title}/>
       )
     })
    }

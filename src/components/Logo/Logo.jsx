@@ -10,9 +10,9 @@ export const Logo = () => {
       <div className={Style.innerDiv}>
       <img src={logoImage} alt="" />
       </div>
-        <div className={Style.para}>
+        {/* <div className={Style.para}>
         <p>Q  tify</p>
-        </div>
+        </div> */}
 
       </div>
 
