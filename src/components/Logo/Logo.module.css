@@ -1,5 +1,6 @@
 .mainDiv{
-    display: flex;;
+    display: flex;
+    margin: 14px;
 
 }
 
@@ -8,11 +9,18 @@
     display: flex;
     flex-direction: column;
     background-image: url('../../assets/logo.png');
-    width: 10px;
+    /* width: 80px; */
+    background-repeat: no-repeat;
+    position: relative;
+    left: 10%;
+    top: 0%;
 }
 
 .para{
-    margin-left: 1px;
-    padding-left: 7px;
     /* width: 100%; */
+    position: absolute;
+    top: 50%;
+    left: 10%;
+
+
 }
