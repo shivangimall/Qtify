@@ -9,11 +9,12 @@ const Card = ({ data, type }) => {
         switch (type) {
             case "album": {
                 const { image, follows, title, songs } = data;
+                // const pic = [...image];
                 return (
                     <Tooltip title={`${songs.length} Songs`} placement='top' arrow>
                     <div className={style.wrapper}>
                         <div className={style.card}>
-                            <img src={image} alt='image' />
+                            <img src={image} alt='pic' />
                             <div className={style.banner}>
                                 <Chip label={`${follows} Follows`} className={style.chip}/>
                             </div>
