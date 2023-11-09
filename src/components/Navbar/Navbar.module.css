@@ -4,4 +4,6 @@
     align-items: center;
     width: 100%;
     background-color: var(--color-primary);
+    padding-left: 10px;
+    padding-right: 10px;
 }
