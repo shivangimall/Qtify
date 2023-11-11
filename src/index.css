@@ -30,3 +30,7 @@ img,svg{
   max-width: 100%;
   display: block;
 }
+
+.swiper-slide{
+  width: auto !important;
+}

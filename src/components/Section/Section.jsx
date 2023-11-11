@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 
 import style from "./Section.module.css";
-import { Card, CircularProgress } from '@mui/material';
+import {CircularProgress } from '@mui/material';
+
+import Card from "../Card/Card";
+import Carousal from '../Carousal/Carousal.jsx';
 
 const Section = ({title,data,type}) => {
 
@@ -20,15 +23,16 @@ const Section = ({title,data,type}) => {
                 {!carousalToggle?"Collapse All":"Show All"}
             </h4>
         </div>
-        {data.length==0?(<CircularProgress/>):(
+          {data.length === 0 ? (<CircularProgress />) : (
             <div className={style.cardsWrapper}>
                 {!carousalToggle?(
                     <div className={style.wrapper}>
                     {data.map((item)=>{
-                        <Card data={item} type={type}/>
+                        return <Card data={item} type={type}/>
                     })}
                     </div>
-                ):(<></>)}
+                ):(
+                    <Carousal data={data} renderComponent={(data)=><Card data={data} type={type}/>}/>)}
             </div>
 
         )}

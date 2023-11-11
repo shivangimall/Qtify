@@ -5,7 +5,8 @@ import Navbar from "./components/Navbar/Navbar"
 import Hero from './components/Hero/Hero';
 import { useEffect, useState } from 'react';
 import { fetchTopAlbum } from './components/Api/api';
-import Card from "./components/Card/Card";
+// import Card from "./components/Card/Card";
+import Section from "./components/Section/Section"
 
 function App() {
 
@@ -26,16 +27,12 @@ function App() {
     <>
    <Navbar/>
    <Hero/>
-   {
-    topAlbumsData.map((item)=>{
-      return (
-      <Card data= {item} type={'album'} key={item.title}/>
-      )
-    })
-   }
+    <div>
+      <Section data={topAlbumsData} type="album" title="Top Album"/>
+    </div>
 
    </>
-  );
+  )
 }
 
 export default App;
