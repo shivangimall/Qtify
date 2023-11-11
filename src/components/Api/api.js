@@ -32,3 +32,13 @@ export const fetchTopAlbum = async()=>{
         console.log(e,'Error from Top Albums');
     }
 }
+
+export const fetchNewAlbum = async()=>{
+    try{
+        const res = await axios.get(`${backend_Endpoint}/albums/new`);
+        return res.data;
+    }
+    catch(e){
+        console.log(e,'Error from New Albums');
+    }
+}
