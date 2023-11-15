@@ -38,9 +38,17 @@ function App() {
     <>
    <Navbar/>
    <Hero/>
+    <div className="wrapSec">
     <div>
-      <Section data={topAlbumsData} type="album" title="Top Albums"/>
-      <Section data={newAlbumsData} type="album" title="New Albums"/>
+    <Section data={topAlbumsData} type="album" title="Top Albums"/>
+    </div>
+    <div>
+    <Section data={newAlbumsData} type="album" title="New Albums"/>
+    </div>
+     <div>
+     <Section data={newAlbumsData} type="album" title="Songs"/> 
+     </div>
+      
     </div>
 
    </>

@@ -5,8 +5,9 @@ import {CircularProgress } from '@mui/material';
 
 import Card from "../Card/Card";
 import Carousal from '../Carousal/Carousal.jsx';
+import BasicTabs from '../Tabs/Tabs.jsx'
 
-const Section = ({title,data,type}) => {
+const Section = ({title,data,type, value=0, handleChange=null}) => {
 
     const [carousalToggle, setCarousalToggle] = useState(true);
 
@@ -23,6 +24,7 @@ const Section = ({title,data,type}) => {
                 {!carousalToggle?"Collapse All":"Show All"}
             </h4>
         </div>
+        {type==="song"?<BasicTabs value={value} handleChange={handleChange}/>:null}
           {data.length === 0 ? (<CircularProgress />) : (
             <div className={style.cardsWrapper}>
                 {!carousalToggle?(
