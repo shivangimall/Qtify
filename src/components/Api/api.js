@@ -42,3 +42,13 @@ export const fetchNewAlbum = async()=>{
         console.log(e,'Error from New Albums');
     }
 }
+
+export const fetchAllSongs = async()=>{
+    try{
+        const res = await axios.get(`${backend_Endpoint}/songs`);
+        return res.data;
+    }
+    catch(e){
+        console.log(e,'Error from Songs');
+    }
+}
